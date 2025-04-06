@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "../constants";
-import profilePic from "../assets/mePNG.png";
+import profilePic from "../assets/me.jpg";
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 
@@ -9,8 +9,8 @@ function Hero() {
       id="home"
       className="border-b border-neutral-900 pb-4 lg:mb-36 pt-16"
     >
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2">
+      <div className="flex justify-between items-center flex-col-reverse md:flex-row gap-4 ">
+        <div className="">
           <div className="flex flex-col items-center lg:items-start">
             <motion.h1
               initial={{ x: -100, opacity: 0 }}
@@ -48,13 +48,13 @@ function Hero() {
             </motion.div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:p-8">
+        <div className="max-w-[400px] mt-10 md:mt-0">
           <div className="flex justify-center">
             <motion.img
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className="w-[600px]"
+              className="rounded-full"
               src={profilePic}
               alt=""
             />

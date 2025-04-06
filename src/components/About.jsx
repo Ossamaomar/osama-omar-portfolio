@@ -6,7 +6,7 @@ function About() {
   return (
     <section
       id="about"
-      className="border-b border-neutral-900 pb-4 scroll-mt-20"
+      className="border-b border-neutral-900 pb-4 scroll-mt-20 w-full"
     >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
@@ -17,28 +17,26 @@ function About() {
         About
         <span className="text-purple-800"> Me</span>
       </motion.h2>
-      <div className="flex flex-wrap">
+      <div className="flex gap-4 justify-center items-center flex-col md:flex-row md:items-start">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
-          className="w-full lg:w-1/2 lg:p-8"
+          className="md:w-[35%]"
         >
-          <div className="flex items-center justify-center">
-            <img className="rounded-2xl" src={aboutImg} alt="about" />
+          <div className="">
+            <img className="rounded-2xl w-full" src={aboutImg} alt="about" />
           </div>
         </motion.div>
-        <div className="w-full lg:w-1/2">
-          <div className="flex justify-center lg:justify-start">
+        <div className="md:w-[65%]">
             <motion.p
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="my-2 max-w-xl py-6"
+              className=""
             >
               {ABOUT_TEXT}
             </motion.p>
-          </div>
         </div>
       </div>
     </section>
